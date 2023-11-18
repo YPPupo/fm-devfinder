@@ -20,7 +20,7 @@ function validateURL(url: string) {
 
 const UserCardInfo = ({ user }: Props) => {
   return (
-    <article className="grid-areas bg-sky-900 p-4 rounded-xl text-white">
+    <article className="grid-areas dark:bg-sky-900 bg-blue-100 shadow-md dark:shadow-none p-4 rounded-xl dark:text-white">
       <div className="section-logo overflow-hidden bg-gray-200 grid place-content-center rounded-full w-24 h-24 mr-3 lg:mx-auto">
         {user.avatar_url ? (
           <Image className="rounded-full" src={user.avatar_url} alt={`profile user image from ${user.name}`} width={100} height={100} />
@@ -42,7 +42,7 @@ const UserCardInfo = ({ user }: Props) => {
       <p className="section-description mt-8 leading-loose">
         {user.bio || "Bio no available"}
       </p>
-      <div className="section-number flex justify-around bg-blue-950 mt-4 p-8 rounded-xl text-center">
+      <div className="section-number flex justify-around shadow-md bg-sky-100 dark:shadow-none dark:bg-blue-950 mt-4 p-8 rounded-xl text-center">
         <article>
           <p>Repos</p>
           <p className="font-bold text-xl">{user.public_repos}</p>
@@ -60,13 +60,13 @@ const UserCardInfo = ({ user }: Props) => {
       <div className="section-social md:grid md:grid-cols-2 mt-4 space-y-3">
         <article className="flex items-center space-x-2">
           <i>
-            <LocationIcon className="fill-white" width={"1rem"} />
+            <LocationIcon className="dark:fill-white fill-blue-950" width={"1rem"} />
           </i>
           <span>{user.location || "Not available"}</span>
         </article>
         <article className="flex items-center space-x-2">
           <i>
-            <LinkIcon className="fill-white" width={"1rem"} />
+            <LinkIcon className="dark:fill-white fill-blue-950" width={"1rem"} />
           </i>
           <a
             className="truncate"
@@ -78,7 +78,7 @@ const UserCardInfo = ({ user }: Props) => {
         </article>
         <article className="flex items-center space-x-2">
           <i>
-            <TwitterIcon className="fill-white" width={"1rem"} />
+            <TwitterIcon className="dark:fill-white fill-blue-950" width={"1rem"} />
           </i>
           <a
             target="_blank"
@@ -93,7 +93,7 @@ const UserCardInfo = ({ user }: Props) => {
         </article>
         <article className="flex items-center space-x-2">
           <i>
-            <BuildingIcon className="fill-white" width={"1rem"} />
+            <BuildingIcon className="dark:fill-white fill-blue-950" width={"1rem"} />
           </i>
           <span>{user.company || "Not available"}</span>
         </article>

@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
@@ -18,9 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={robotoMono.className}>
-        <div className="min-h-screen bg-blue-950 grid place-content-center px-4">
+        <div className="min-h-screen dark:bg-blue-950 bg-blue-100 grid place-content-center px-4">
           <div className="sm:w-[500px] md:w-[600px] lg:w-[700px]">
             <Navbar />
             {children}
