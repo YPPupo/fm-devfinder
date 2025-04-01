@@ -24,7 +24,7 @@ const FormSearchUser = ({ getUser }: Props) => {
       </span>
       <input
         name="username"
-        className="flex-1 h-14 p-2 rounded-lg bg-blue-100 dark:bg-transparent dark:text-white dark:placeholder:text-white focus:outline-none focus:ring-2 focus:ring-sky-500"
+        className="flex-1 h-14 p-2 rounded-lg bg-blue-100 dark:bg-transparent dark:text-white dark:placeholder:text-white focus:outline-hidden focus:ring-2 focus:ring-sky-500"
         type="text"
         placeholder="Search Github username..."
       />

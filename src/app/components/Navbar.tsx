@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <header className="flex items-center space-x-2 mb-10">
-      <h1 className="text-3xl dark:text-white text-blue-950 font-bold flex-grow">
+      <h1 className="text-3xl dark:text-white text-blue-950 font-bold grow">
         devfinder
       </h1>
 
