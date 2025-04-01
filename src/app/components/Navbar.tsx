@@ -11,10 +11,9 @@ const Navbar = () => {
   const [hasMounted, setHasMounted] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">(INITIALTHEMESTATE);
 
-
-  useEffect(()=> {
-    setHasMounted(true)
-  },[])
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   useEffect(() => {
     if (theme === "dark") {
@@ -25,17 +24,26 @@ const Navbar = () => {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  if(!hasMounted){
-    return <></>
+  if (!hasMounted) {
+    return <></>;
   }
 
   const handleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
   return (
-    <header className="flex items-center space-x-2 mb-10">
-      <h1 className="text-3xl dark:text-white text-blue-950 font-bold grow">
-        devfinder
-      </h1>
+    <header className="flex items-center justify-between space-x-2 mb-10">
+      <div className="flex items-center space-x-2">
+        <img
+          src={theme === "light" ? "/github.svg" : "/github-white.svg"}
+          alt="devfinder logo"
+          className="hidden dark:block"
+          width={25}
+          height={25}
+        />
+        <h1 className="text-3xl dark:text-white text-blue-950 font-bold grow">
+          devfinder
+        </h1>
+      </div>
 
       <div className="flex items-center" onClick={handleTheme}>
         <span className="uppercase dark:text-white text-blue-950">
